@@ -1,0 +1,16 @@
+#search-bar:hover {
+  border: solid 1px #0d6efd !important;
+  i{
+    color: #0d6efd !important;
+  }
+  span{
+    color: #0d6efd !important;
+  }
+}
+
+#menu:hover {
+  border: solid 1px #0d6efd !important;
+  i{
+    color: #0d6efd !important;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    <link rel="icon" href="/assets/favicon/favicon.ico" />
+    <link href="/assets/css/bootstrap.icons.css" rel="stylesheet" />
+    <link href="/assets/css/normalize.css" rel="stylesheet" />
+    <link href="/assets/css/custom.css" rel="stylesheet" />
+    <link
+      href="/assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script
+      src="/assets/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/assets/js/jquery-3.7.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar bg-light navbar-expand-lg bg-body-tertiary"
+        style="height: 64px"
+      >
+        <div class="container-fluid d-flex justify-content-between">
+          <div class="bg-light">
+            <div class="d-flex justify-content-start gap-3">
+              <div class="d-none d-lg-block">
+                <img
+                  src="/assets/favicon/logo.ico"
+                  height="40px"
+                  width="40px"
+                />
+              </div>
+              <button class="d-lg-none btn" id="menu">
+                <i class="bi bi-list fs-4"></i>
+              </button>
+            </div>
+          </div>
+          <button
+            id="search-bar"
+            class="btn bg-light border border-1 d-flex align-items-center"
+            style="width: 200px"
+          >
+            <i class="bi bi-search"></i>
+            <span class="mx-2">search</span>
+          </button>
+          <div class="bg-light"></div>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="d-flex justify-content-start container-fluid"
+      style="min-height: calc(100% - 32px - 64px)"
+    >
+      <!-- 广告位1 -->
+      <div
+        class="d-none d-lg-block my-3 bg-light mx-5 h-auto rounded-2"
+        style="width: 250px"
+      >
+        广告位1
+      </div>
+      <!-- 内容区域 -->
+      <div id="content" class="my-3 h-auto bg-light w-100 rounded-2 p-4">
+        {{ yield . }}
+      </div>
+      <!-- 广告位2 -->
+      <div
+        class="d-none d-lg-block my-3 bg-light mx-5 h-auto rounded-2"
+        style="width: 250px"
+      >
+        广告位2
+      </div>
+    </div>
+    <!-- footer -->
+    <div
+      class="bg-light d-flex justify-content-center align-items-center"
+      style="height: 32px"
+    >
+      <div>Copyright © [year] [owner]. All rights reserved.</div>
+    </div>
+  </body>
+</html>
