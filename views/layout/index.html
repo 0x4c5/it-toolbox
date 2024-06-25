@@ -8,6 +8,7 @@
     <link href="/assets/css/bootstrap.icons.css" rel="stylesheet" />
     <link href="/assets/css/normalize.css" rel="stylesheet" />
     <link href="/assets/css/custom.css" rel="stylesheet" />
+    <link href="/assets/css/message.min.css" rel="stylesheet">
     <link
       href="/assets/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,6 +22,8 @@
       src="/assets/js/jquery-3.7.1.min.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/assets/js/clipboard.min.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/message.min.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -39,19 +42,58 @@
                   width="40px"
                 />
               </div>
-              <button class="d-lg-none btn" id="menu">
+              <button
+                class="d-lg-none btn"
+                id="menu"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#side-bar"
+                aria-controls="side-bar"
+              >
                 <i class="bi bi-list fs-4"></i>
               </button>
+              <div
+                class="offcanvas offcanvas-start w-50"
+                tabindex="-1"
+                id="side-bar"
+                aria-labelledby="side-bar"
+              >
+                <div class="offcanvas-header">this is title</div>
+              </div>
             </div>
           </div>
           <button
             id="search-bar"
             class="btn bg-light border border-1 d-flex align-items-center"
             style="width: 200px"
+            data-bs-toggle="modal"
+            data-bs-target="#search-content"
           >
             <i class="bi bi-search"></i>
             <span class="mx-2">search</span>
           </button>
+          <div
+            class="modal fade"
+            id="search-content"
+            tabindex="-1"
+            aria-labelledby="search-content"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content p-3 bg-light" style="min-height: 300px">
+                <form class="d-flex border border-primary border-1 rounded-2">
+                  <label
+                    class="d-flex justify-content-center align-items-center fs-5 ms-3 text-primary"
+                    ><i class="bi bi-search"></i
+                  ></label>
+                  <input
+                    id="search-tools-input"
+                    class="text-primary p-2 w-100 rounded-2 fs-5 focus-ring border border-0 border-white shadow-none"
+                    style="height: 48px"
+                    placeholder="Search tools"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
           <div class="bg-light"></div>
         </div>
       </nav>
@@ -86,5 +128,6 @@
     >
       <div>Copyright © [year] [owner]. All rights reserved.</div>
     </div>
+    <script></script>
   </body>
 </html>
